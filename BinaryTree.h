@@ -44,6 +44,7 @@ BinaryTree<T>::BinaryTree() : root{nullptr}
 template <typename T>
 BinaryTree<T>::~BinaryTree()
 {
+	Delete(this->root);
 }
 
 template <typename T>
@@ -181,7 +182,7 @@ template <typename T>
 void BinaryTree<T>::Delete(Node *root)
 {
 	if (!root)
-	{	
+	{       this->root=nullptr;	
 		return;
 	}
 	
